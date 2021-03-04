@@ -6,7 +6,7 @@
 
 
 
-char Zamien( int KodZnaku, int *TabKodow, char *TabZnakow, int Rozmiar)
+char Zamien( int KodZnaku, char *TabKodow, char *TabZnakow, int Rozmiar)    /*Poprawiono int *TabKodow na char *Tabkodów*/
 {
   int i;
 
@@ -17,7 +17,7 @@ char Zamien( int KodZnaku, int *TabKodow, char *TabZnakow, int Rozmiar)
 }
 
 
-void KonwertujNapis( char *Napis, int *TabKodow, char *TabZnakow, int Rozmiar)
+void KonwertujNapis( char *Napis, char *TabKodow, char *TabZnakow, int Rozmiar)    /*Poprawiono int *TabKodow na char *Tabkodów*/
 {
   unsigned int i;
  
@@ -31,7 +31,7 @@ int main()
   int  IloscKodow = 10;
   int  Rozmiar = IloscKodow * sizeof('¶');
 
-  int  *TabKodow = (int*)malloc(Rozmiar);
+  char  *TabKodow = (char*)malloc(Rozmiar);                     /*Zamieniono int na char*/
   char *TabZnakow = (char*)malloc(IloscKodow*sizeof(char)); 
   char *Napis = strdup("Cze¶æ ¦wiecie!!! ¯yczê mi³ego dnia.");
 

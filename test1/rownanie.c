@@ -1,3 +1,7 @@
+/*Przy użyciu kompilatora gcc występuje błąd spowodowany użyciem funkcji sqrt() - rozwiązaniem tego jest dołączenie biblioteki matematycznej za pomocą flagi -lm.
+W przypadku kompliatora g++ nie trzeba używać żadnej flagi, ponieważ języka posiada odpowiednia bibliotekę.*/
+
+
 #include <stdio.h>
 #include <math.h>
 

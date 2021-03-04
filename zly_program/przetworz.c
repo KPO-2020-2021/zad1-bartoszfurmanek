@@ -1,3 +1,5 @@
+/*Podczas kompilacji g++ wystąpił błąd, należało zamienić wskaźnik na napis na tablicę z napisem*/
+
 #include <stdio.h>
 #include <ctype.h>
 
@@ -125,7 +127,7 @@ int IloscWielkichLiter(char *Tekst)
 
 int main()
 {
-  char *Napis = "Jak dobrze jest wstac skoro swit. Jutrzenki blask ...";
+  char Napis[]= "Jak dobrze jest wstac skoro swit. Jutrzenki blask ...";        /*Zamieniono wskaźnik na tablicę*/
   int IloscSpacji;
   int DlugoscSlowaXXX;
   int IloscMaLiter = 0;
