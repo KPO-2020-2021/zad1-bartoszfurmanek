@@ -1,3 +1,5 @@
+/*Kompilacja g++ przechodiÅ‚a pomyÅ›lnie, jednakÅ¼e program nie dziaÅ‚aÅ‚ poprawnie - nie przeprowadzaÅ‚ konwersji znakÃ³w. Po zamienie typÃ³w niektÃ³rych zmiennych z int na char program dziaÅ‚a poprawnie*/
+
 #include <stdio.h>
 #include <malloc.h>
 #include <string.h>
@@ -27,22 +29,22 @@ void KonwertujNapis( char *Napis, int *TabKodow, char *TabZnakow, int Rozmiar)
 int main()
 {
   int  IloscKodow = 10;
-  int  Rozmiar = IloscKodow * sizeof('¶');
+  int  Rozmiar = IloscKodow * sizeof('Â¶');
 
   int  *TabKodow = (int*)malloc(Rozmiar);
   char *TabZnakow = (char*)malloc(IloscKodow*sizeof(char)); 
-  char *Napis = strdup("Cze¶æ ¦wiecie!!! ¯yczê mi³ego dnia.");
+  char *Napis = strdup("CzeÂ¶Ã¦ Â¦wiecie!!! Â¯yczÃª miÂ³ego dnia.");
 
-  TabKodow[0] = 'æ';     TabZnakow[0] = 'c';
-  TabKodow[1] = 'ê';     TabZnakow[1] = 'e';
-  TabKodow[2] = '³';     TabZnakow[2] = 'l';
-  TabKodow[3] = '¶';     TabZnakow[3] = 's';
-  TabKodow[4] = '¦';     TabZnakow[4] = 'S';
-  TabKodow[5] = '¯';     TabZnakow[5] = 'Z';
-  TabKodow[6] = '¯';     TabZnakow[6] = 'Z';
-  TabKodow[7] = '¯';     TabZnakow[7] = 'Z';
-  TabKodow[8] = '¯';     TabZnakow[8] = 'Z';
-  TabKodow[9] = '¯';     TabZnakow[9] = 'Z';    
+  TabKodow[0] = 'Ã¦';     TabZnakow[0] = 'c';
+  TabKodow[1] = 'Ãª';     TabZnakow[1] = 'e';
+  TabKodow[2] = 'Â³';     TabZnakow[2] = 'l';
+  TabKodow[3] = 'Â¶';     TabZnakow[3] = 's';
+  TabKodow[4] = 'Â¦';     TabZnakow[4] = 'S';
+  TabKodow[5] = 'Â¯';     TabZnakow[5] = 'Z';
+  TabKodow[6] = 'Â¯';     TabZnakow[6] = 'Z';
+  TabKodow[7] = 'Â¯';     TabZnakow[7] = 'Z';
+  TabKodow[8] = 'Â¯';     TabZnakow[8] = 'Z';
+  TabKodow[9] = 'Â¯';     TabZnakow[9] = 'Z';    
   
   printf("Napis Latin2:  \"%s\"\n",Napis);
 
